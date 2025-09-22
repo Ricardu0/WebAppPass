@@ -25,5 +25,6 @@ jobs:
 
       - name: Build e Push da imagem
         run: |
-          docker build -t ghcr.io/${{ github.repository_owner }}/meu-html:latest .
-          docker push ghcr.io/${{ github.repository_owner }}/meu-html:latest
+           IMAGE_NAME=ghcr.io/ricardu0/meu-html:latest
+           docker build -t $IMAGE_NAME .
+           docker push $IMAGE_NAME
